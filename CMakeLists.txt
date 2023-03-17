@@ -3,4 +3,4 @@ project(Sorting_Algorithms)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Sorting_Algorithms main.cpp sortlib_imp.cpp)
+add_executable(Sorting_Algorithms main.cpp sortlib.h)

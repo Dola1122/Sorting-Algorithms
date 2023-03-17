@@ -55,12 +55,6 @@ build CMakeFiles/Sorting_Algorithms.dir/main.cpp.obj: CXX_COMPILER__Sorting_Algo
   OBJECT_DIR = CMakeFiles\Sorting_Algorithms.dir
   OBJECT_FILE_DIR = CMakeFiles\Sorting_Algorithms.dir
 
-build CMakeFiles/Sorting_Algorithms.dir/sortlib_imp.cpp.obj: CXX_COMPILER__Sorting_Algorithms_Debug C$:/ahmed/FCAI/Data$ Structures/assignment$ 1/Sorting_Algorithms/sortlib_imp.cpp || cmake_object_order_depends_target_Sorting_Algorithms
-  DEP_FILE = CMakeFiles\Sorting_Algorithms.dir\sortlib_imp.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Sorting_Algorithms.dir
-  OBJECT_FILE_DIR = CMakeFiles\Sorting_Algorithms.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Sorting_Algorithms
@@ -69,7 +63,7 @@ build CMakeFiles/Sorting_Algorithms.dir/sortlib_imp.cpp.obj: CXX_COMPILER__Sorti
 #############################################
 # Link the executable Sorting_Algorithms.exe
 
-build Sorting_Algorithms.exe: CXX_EXECUTABLE_LINKER__Sorting_Algorithms_Debug CMakeFiles/Sorting_Algorithms.dir/main.cpp.obj CMakeFiles/Sorting_Algorithms.dir/sortlib_imp.cpp.obj
+build Sorting_Algorithms.exe: CXX_EXECUTABLE_LINKER__Sorting_Algorithms_Debug CMakeFiles/Sorting_Algorithms.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Sorting_Algorithms.dir
