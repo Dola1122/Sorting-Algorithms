@@ -24,6 +24,22 @@ namespace sortlib {
             }
         }
     }
+    template<typename T>
+    void bubbleSort(T arr[], int n){
+
+        // loop through all array elements
+        for (int i = 0; i < n - 1 ; i++) {
+
+            // last element is already sorted
+            for (int j = 0; j < n - i - 1 ; j++) {
+
+                // swap if the element found is greater than the next element
+                if(arr[j] > arr[j+1]){
+                    swap(arr[j],arr[j+1]);
+                }
+            }
+        }
+    }
 
     template<typename T>
     void shellSort(T arr[], int n) {
