@@ -113,6 +113,7 @@ namespace sortlib
         j = 0;
         k = l;
 
+        //loop through all array elements
         while (i < n1 && j < n2) {
             if (lArry[i] <= rArry[j]) {
                 arr[k] = lArry[i];
