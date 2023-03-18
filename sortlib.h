@@ -1,57 +1,93 @@
 #ifndef SORTING_ALGORITHMS_SORTLIB_H
 #define SORTING_ALGORITHMS_SORTLIB_H
-namespace sortlib {
+namespace sortlib
+{
     // swap two elements by refrence
-    template<typename T>
-    void swap(T &a, T &b) {
+    template <typename T>
+    void swap(T &a, T &b)
+    {
         T temp = a;
         a = b;
         b = temp;
     }
 
-    template<typename T>
-    void insertionSort(T arr[], int n) {
+    template <typename T>
+    void insertionSort(T arr[], int n)
+    {
 
         // loop over every element in the array starting from the second element
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < n; i++)
+        {
 
             // put every element in its sorted position on the left side
             // ( left : sorted elements | right : unsorted elements )
             int k = i;
-            while (arr[k] < arr[k - 1] && k > 0) {
+            while (arr[k] < arr[k - 1] && k > 0)
+            {
                 swap(arr[k], arr[k - 1]);
                 k--;
             }
         }
     }
-    template<typename T>
-    void bubbleSort(T arr[], int n){
+    template <typename T>
+    void selectionSort(T arr[], int n)
+    {
+        int minIndex;
+
+        // assign the current index to the minimum index
+        for (size_t i = 0; i < n - 1; i++)
+        {
+            minIndex = i;
+
+            for (size_t j = i + 1; j < n; j++)
+            {
+                // if there is an index less than the current minimum update the minimum index with it
+                if (arr[j] < arr[minIndex])
+                {
+                    minIndex = j;
+                }
+            }
+
+            // swap the minimum item with the item at the current index (i)
+            swap(arr[minIndex], arr[i]);
+        }
+    }
+    template <typename T>
+    void bubbleSort(T arr[], int n)
+    {
 
         // loop through all array elements
-        for (int i = 0; i < n - 1 ; i++) {
+        for (int i = 0; i < n - 1; i++)
+        {
 
             // last element is already sorted
-            for (int j = 0; j < n - i - 1 ; j++) {
+            for (int j = 0; j < n - i - 1; j++)
+            {
 
                 // swap if the element found is greater than the next element
-                if(arr[j] > arr[j + 1]){
-                    swap(arr[j],arr[j + 1]);
+                if (arr[j] > arr[j + 1])
+                {
+                    swap(arr[j], arr[j + 1]);
                 }
             }
         }
     }
 
-    template<typename T>
-    void shellSort(T arr[], int n) {
+    template <typename T>
+    void shellSort(T arr[], int n)
+    {
 
         // loop for each gap , gap start from n/2 end when gap = 0
-        for (int gap = n / 2; gap > 0; gap /= 2) {
+        for (int gap = n / 2; gap > 0; gap /= 2)
+        {
 
             // loop over each element starting from gap and to the end of the array
-            for (int i = gap; i < n; i++) {
+            for (int i = gap; i < n; i++)
+            {
 
                 // put the element in the (i)th position in its correct position
-                for (int j = i; j >= gap && arr[j - gap] > arr[j]; j -= gap) {
+                for (int j = i; j >= gap && arr[j - gap] > arr[j]; j -= gap)
+                {
                     swap(arr[j - gap], arr[j]);
                 }
             }
@@ -59,4 +95,4 @@ namespace sortlib {
     }
 
 }
-#endif //SORTING_ALGORITHMS_SORTLIB_H
+#endif // SORTING_ALGORITHMS_SORTLIB_H
