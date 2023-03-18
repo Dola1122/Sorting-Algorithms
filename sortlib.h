@@ -34,8 +34,8 @@ namespace sortlib {
             for (int j = 0; j < n - i - 1 ; j++) {
 
                 // swap if the element found is greater than the next element
-                if(arr[j] > arr[j+1]){
-                    swap(arr[j],arr[j+1]);
+                if(arr[j] > arr[j + 1]){
+                    swap(arr[j],arr[j + 1]);
                 }
             }
         }
