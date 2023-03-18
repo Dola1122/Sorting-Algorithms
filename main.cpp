@@ -12,24 +12,23 @@ int main()
     int sze1 = sizeof(numbers) / sizeof(numbers[0]);
     int sze2 = sizeof(names) / sizeof(names[0]);
 
-    //    insertionSort(numbers,sze1);
-    //    insertionSort(names,sze2);
+//    insertionSort(numbers,sze1);
+//    insertionSort(names,sze2);
 
-    bubbleSort(numbers, sze1);
-    bubbleSort(names, sze2);
-    //    selectionSort(numbers,sze1);
-    //    selectionSort(names,sze2);
+//    selectionSort(numbers,sze1);
+//    selectionSort(names,sze2);
 
-    //    shellSort(numbers, sze1);
-    //    shellSort(names, sze2);
+//    bubbleSort(numbers, sze1);
+//    bubbleSort(names, sze2);
 
-    for (auto i : numbers)
-        cout << i << "  ";
-    cout << endl;
+//    shellSort(numbers, sze1);
+//    shellSort(names, sze2);
 
-    for (auto i : names)
-        cout << i << "  ";
-    cout << endl;
+    mergeSort(numbers,0,sze1 - 1);
+    mergeSort(names,0,sze2 - 1);
+
+    print(numbers,sze1);
+    print(names,sze2);
 
     return 0;
 }
