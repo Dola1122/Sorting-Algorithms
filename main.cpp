@@ -9,7 +9,7 @@ int main()
 {
     double numbers[] = {5.3, 2.2, 4.9, 3.23, 0.1, 10.3, 8.1};
     string names[] = {"mohamed", "mai", "ahmed", "nour", "sara", "adam", "aya"};
-    int integers[] = {5, 2, 4, 3, 0, 10, 8};
+    int integers[] = {5, 2, 4, 3, 0, 10, 8, 1, 7, 9, 6};
 
     int sze1 = sizeof(numbers) / sizeof(numbers[0]);
     int sze2 = sizeof(names) / sizeof(names[0]);

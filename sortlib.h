@@ -113,26 +113,29 @@ namespace sortlib
     {
         // get the max element in the array
         int max = *std::max_element(arr, arr + n);
-        // create array to store the count of each element
-        int count[max];
-        // create array to store the sorted elements
-        int sorted[n];
+        // create a dynamic array with size max+1 to store the count of each element
+        int *count = new int[max + 1];
+        // create a dynamic array with size n to store the sorted elements
+        int *sorted = new int[n];
 
         // initialize the count array with 0
         for (size_t i = 0; i <= max; i++)
         {
             count[i] = 0;
         }
+
         // count the number of occurrences of each element and store it in the count array
         for (int i = 0; i < n; i++)
         {
             count[arr[i]]++;
         }
+
         // calculate the cumulative sum of the count array
         for (int i = 1; i <= max; i++)
         {
             count[i] += count[i - 1];
         }
+
         // put the elements in the sorted array in their correct position
         for (int i = n - 1; i >= 0; i--)
         {
@@ -140,11 +143,18 @@ namespace sortlib
             // decrement the count of the element after place it in the sorted array
             count[arr[i]]--;
         }
+
+        // free the memory of the count array
+        delete[] count;
+
         // copy the sorted array to the original array
         for (int i = 0; i < n; i++)
         {
             arr[i] = sorted[i];
         }
+
+        // free the memory of the sorted array
+        delete[] sorted;
     }
 
     template <typename T>
