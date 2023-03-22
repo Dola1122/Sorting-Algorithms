@@ -215,7 +215,6 @@ namespace sortlib
     template <typename T>
     void mergeSort(T arr[], int l, int r)
     {
-
         if (l < r)
         {
             int m = l + (r - l) / 2;
@@ -226,6 +225,47 @@ namespace sortlib
 
             // Merge the sorted halves
             merge(arr, l, m, r);
+        }
+    }
+
+    template <typename T>
+    int partition(T arr[], int l, int r) {
+        // from the second element to the end of array
+        int i = l + 1;
+        int j = r;
+        // the pivot element is the first element
+        T pivot = arr[l];
+
+        // loop till (i > j)
+        while (i <= j) {
+            // loop from the start till getting an element not less than pivot element
+            while (arr[i] < pivot) {
+                i++;
+            }
+            // loop from the end till getting an element not greater than pivot element
+            while (arr[j] > pivot) {
+                j--;
+            }
+            // swap any element on the wrong side
+            if (i < j)
+                swap(arr[i], arr[j]);
+        }
+        // put the pivot element in its right position
+        swap(arr[l], arr[j]);
+        return j;
+    }
+
+    template <typename T>
+    void quickSort(T arr[], int l, int r) {
+        if (l < r) {
+            // determine the pivot position
+            int pivotPosition = partition(arr, l, r);
+
+            // sort the left side
+            quickSort(arr, l, pivotPosition - 1);
+
+            // sort the right side
+            quickSort(arr, pivotPosition + 1, r);
         }
     }
 }

@@ -7,6 +7,7 @@ using namespace std;
 
 int main() {
     double numbers[] = {5.3, 2.2, 4.9, 3.23, 0.1, 10.3, 8.1};
+//    double numbers[] = {10.1, 16.2, 8.2, 12.2, 6.3, 4.2};
     string names[] = {"mohamed", "mai", "ahmed", "nour", "sara", "adam", "aya"};
     int integers[] = {5, 2, 4, 3, 0, 10, 8, 1, 7, 9, 6};
 
@@ -29,35 +30,40 @@ int main() {
 //    mergeSort(numbers, 0, sze1 - 1);
 //    mergeSort(names, 0, sze2 - 1);
 
+//    quickSort(numbers, 0, sze1 - 1);
+//    quickSort(names, 0, sze2 - 1);
+    quickSort(integers, 0, sze3 - 1);
+
 //    print(numbers, sze1);
 //    print(names, sze2);
+    print(integers, sze3);
 
 //    countSort(integers, sze3);
 //    print(integers, sze3);
 
 
-    //Time
-    int arr[200];
-    int arr1[500];
-    int arr2[1000];
-    int arr3[5000];
-    int arr4[10000];
-    int arr5[20000];
-    int arr6[50000];
-    int n = sizeof(arr) / sizeof(arr[0]);
-    for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 100000;
-    }
-    clock_t start = clock();
-    //selectionSort(arr, n);
-    //insertionSort(arr, n);
-    //bubbleSort(arr, n);
-    //shellSort(arr,n)
-    //countSort(arr, n);
-    //mergeSort(arr, 0, n - 1);
-    clock_t end = clock();
-    double time = (double) (end - start) / CLOCKS_PER_SEC;
-    cout << "Time: " << time << endl;
+//    //Time
+//    int arr[200];
+//    int arr1[500];
+//    int arr2[1000];
+//    int arr3[5000];
+//    int arr4[10000];
+//    int arr5[20000];
+//    int arr6[50000];
+//    int n = sizeof(arr) / sizeof(arr[0]);
+//    for (int i = 0; i < n; i++) {
+//        arr[i] = rand() % 100000;
+//    }
+//    clock_t start = clock();
+//    //selectionSort(arr, n);
+//    //insertionSort(arr, n);
+//    //bubbleSort(arr, n);
+//    //shellSort(arr,n)
+//    //countSort(arr, n);
+//    //mergeSort(arr, 0, n - 1);
+//    clock_t end = clock();
+//    double time = (double) (end - start) / CLOCKS_PER_SEC;
+//    cout << "Time: " << time << endl;
 
     return 0;
 }
