@@ -239,15 +239,15 @@ namespace sortlib
         // loop till (i > j)
         while (i <= j) {
             // loop from the start till getting an element not less than pivot element
-            while (arr[i] < pivot) {
+            if (arr[i] <= pivot) {
                 i++;
             }
             // loop from the end till getting an element not greater than pivot element
-            while (arr[j] > pivot) {
+            else if (arr[j] > pivot) {
                 j--;
             }
             // swap any element on the wrong side
-            if (i < j)
+            else
                 swap(arr[i], arr[j]);
         }
         // put the pivot element in its right position

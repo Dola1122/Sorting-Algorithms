@@ -30,12 +30,12 @@ int main() {
 //    mergeSort(numbers, 0, sze1 - 1);
 //    mergeSort(names, 0, sze2 - 1);
 
-//    quickSort(numbers, 0, sze1 - 1);
-//    quickSort(names, 0, sze2 - 1);
+    quickSort(numbers, 0, sze1 - 1);
+    quickSort(names, 0, sze2 - 1);
     quickSort(integers, 0, sze3 - 1);
 
-//    print(numbers, sze1);
-//    print(names, sze2);
+    print(numbers, sze1);
+    print(names, sze2);
     print(integers, sze3);
 
 //    countSort(integers, sze3);
